@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "IXL Question Types knowledge store — shared by Auditor and Solver",
+  "trustStates": ["unknown", "candidate", "tested", "validated", "deprecated"],
+  "requiredFields": [
+    "id",
+    "name",
+    "trust",
+    "detection",
+    "interaction",
+    "completionCheck",
+    "submission",
+    "version",
+    "lastValidated"
+  ],
+  "typeRecord": {
+    "id": "string — stable identifier e.g. fill-in",
+    "name": "string — human label",
+    "aliases": ["string"],
+    "subjects": ["math-geometry", "ela-grade-10", "science-chemistry", "social-civics"],
+    "trust": "unknown|candidate|tested|validated|deprecated",
+    "confidence": "number 0..1",
+    "detection": {
+      "selectors": ["CSS selectors that indicate this type"],
+      "requireInRoot": true,
+      "minMatches": 1,
+      "negativeSelectors": ["selectors that rule this type out"],
+      "textHints": ["regex strings on question text"]
+    },
+    "dom": {
+      "answerControls": "description of interactive elements",
+      "attributes": ["aria-*, data-*, class fingerprints"]
+    },
+    "interaction": {
+      "methods": ["click", "type", "drag", "select", "highlight"],
+      "sequence": ["ordered steps as strings"],
+      "elementStrategies": ["how to find the right control"]
+    },
+    "completionCheck": {
+      "required": true,
+      "checks": ["observable state checks before submit"],
+      "incompleteSignals": ["text or DOM signals of incomplete"]
+    },
+    "submission": {
+      "buttonSelectors": ["submit button selectors"],
+      "preSubmitVerify": true,
+      "maxSubmitAttempts": 2
+    },
+    "recovery": {
+      "onIncomplete": ["steps"],
+      "maxRecoveryAttempts": 2
+    },
+    "failureModes": ["common failures"],
+    "testResults": [],
+    "version": "1.0.0",
+    "lastValidated": null,
+    "notes": "string"
+  }
+}

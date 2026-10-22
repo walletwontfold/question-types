@@ -1,0 +1,223 @@
+{
+  "generatedAt": "2026-10-22T19:21:41.325Z",
+  "chromeHeadlessAttempted": true,
+  "results": [
+    {
+      "id": "text-highlight",
+      "case": "no-selection",
+      "outcome": "PASS",
+      "detail": "oracle complete=false when none selected",
+      "kind": "SIMULATED"
+    },
+    {
+      "id": "text-highlight",
+      "case": "selected-quickly",
+      "outcome": "PASS",
+      "detail": "oracle complete=true when quickly selected",
+      "kind": "SIMULATED"
+    },
+    {
+      "id": "text-highlight",
+      "case": "handler-claim-vs-oracle",
+      "outcome": "PASS",
+      "detail": "detects disagreement: handler claimed success, oracle incomplete",
+      "kind": "SIMULATED"
+    },
+    {
+      "id": "fill-in",
+      "case": "reject-duplicated-10.15",
+      "outcome": "PASS",
+      "detail": "duplicated value must not complete",
+      "kind": "SIMULATED"
+    },
+    {
+      "id": "fill-in",
+      "case": "accept-exact-10.15",
+      "outcome": "PASS",
+      "detail": "exact value completes",
+      "kind": "SIMULATED"
+    },
+    {
+      "id": "_guard",
+      "case": "block-unverified",
+      "outcome": "PASS",
+      "detail": "submission blocked when incomplete",
+      "kind": "UNIT"
+    },
+    {
+      "id": "text-highlight",
+      "case": "no-silent-trust-promotion",
+      "outcome": "PASS",
+      "detail": "candidate remains ineligible",
+      "kind": "UNIT"
+    },
+    {
+      "id": "_env",
+      "case": "chrome-headless-fixture-dump",
+      "outcome": "PASS",
+      "detail": "fixture DOM contains chunks",
+      "kind": "BROWSER_HEADLESS"
+    }
+  ],
+  "matrix": [
+    {
+      "id": "graph-placement",
+      "trust": "candidate",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "drag-drop",
+      "trust": "tested",
+      "handler": "applyDragDrop",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "text-highlight",
+      "trust": "tested",
+      "handler": "applyTextHighlight",
+      "status": "HAS_HANDLER",
+      "oracle": [
+        {
+          "id": "text-highlight",
+          "case": "no-selection",
+          "outcome": "PASS",
+          "detail": "oracle complete=false when none selected",
+          "kind": "SIMULATED"
+        },
+        {
+          "id": "text-highlight",
+          "case": "selected-quickly",
+          "outcome": "PASS",
+          "detail": "oracle complete=true when quickly selected",
+          "kind": "SIMULATED"
+        },
+        {
+          "id": "text-highlight",
+          "case": "handler-claim-vs-oracle",
+          "outcome": "PASS",
+          "detail": "detects disagreement: handler claimed success, oracle incomplete",
+          "kind": "SIMULATED"
+        },
+        {
+          "id": "text-highlight",
+          "case": "no-silent-trust-promotion",
+          "outcome": "PASS",
+          "detail": "candidate remains ineligible",
+          "kind": "UNIT"
+        }
+      ],
+      "overall": "SIMULATED_PASS"
+    },
+    {
+      "id": "hot-spot",
+      "trust": "unknown",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "equation-editor",
+      "trust": "unknown",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "fill-in",
+      "trust": "validated",
+      "handler": "applyFillIn",
+      "status": "HAS_HANDLER",
+      "oracle": [
+        {
+          "id": "fill-in",
+          "case": "reject-duplicated-10.15",
+          "outcome": "PASS",
+          "detail": "duplicated value must not complete",
+          "kind": "SIMULATED"
+        },
+        {
+          "id": "fill-in",
+          "case": "accept-exact-10.15",
+          "outcome": "PASS",
+          "detail": "exact value completes",
+          "kind": "SIMULATED"
+        }
+      ],
+      "overall": "SIMULATED_PASS"
+    },
+    {
+      "id": "multiple-choice",
+      "trust": "validated",
+      "handler": "applyMultipleChoice",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "multiple-select",
+      "trust": "validated",
+      "handler": "applyMultipleChoice",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "dropdown",
+      "trust": "tested",
+      "handler": "applyDropdown",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "number-line",
+      "trust": "unknown",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "matching-sorting",
+      "trust": "tested",
+      "handler": "partial",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "tables-charts",
+      "trust": "unknown",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "fraction",
+      "trust": "tested",
+      "handler": "applyFraction",
+      "status": "HAS_HANDLER",
+      "oracle": [],
+      "overall": "NOT_TESTED"
+    },
+    {
+      "id": "unknown",
+      "trust": "unknown",
+      "handler": null,
+      "status": "NOT_IMPLEMENTED",
+      "oracle": [],
+      "overall": "NOT_IMPLEMENTED"
+    }
+  ],
+  "counts": {
+    "PASS": 8
+  }
+}

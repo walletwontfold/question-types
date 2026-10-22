@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>IXL highlight fixture</title>
+<style>
+.select-words-chunk { display:inline; padding:2px 4px; cursor:pointer; border-radius:3px; }
+.select-words-chunk.is-selected, .select-words-chunk[aria-selected="true"] { background:#c8e6c9; outline:2px solid #2e7d32; }
+#panel { position:fixed; right:0; top:0; width:200px; background:#eee; padding:8px; }
+</style></head>
+<body>
+<div id="cinder-ixl-panel"><input id="c-min" type="number" value="30"/><input id="c-miss" type="number" value="0"/></div>
+<main id="practice-page-container" class="practice-item">
+  <p>Click the adverb:</p>
+  <p class="passage">
+    <span class="select-words-chunk" data-word="0">The</span>
+    <span class="select-words-chunk" data-word="1">cat</span>
+    <span class="select-words-chunk" data-word="2">ran</span>
+    <span class="select-words-chunk" data-word="3">quickly</span>
+    <span class="select-words-chunk" data-word="4">home</span>
+  </p>
+  <button class="submit-button">Submit</button>
+</main>
+<script>
+// App-like selection state (not window.getSelection)
+document.querySelectorAll('.select-words-chunk').forEach(el => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('.select-words-chunk').forEach(x => {
+      x.classList.remove('is-selected');
+      x.removeAttribute('aria-selected');
+    });
+    el.classList.add('is-selected');
+    el.setAttribute('aria-selected', 'true');
+  });
+});
+</script>
+</body></html>
